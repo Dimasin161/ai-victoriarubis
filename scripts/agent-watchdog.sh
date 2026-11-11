@@ -50,6 +50,9 @@ confirm_startup() {
     elif echo "$scr" | grep -q "Bypass Permissions mode"; then
       tmux send-keys -t "$name" Down; sleep 0.5; tmux send-keys -t "$name" Enter
       log "accepted bypass-permissions dialog for $name"
+    elif echo "$scr" | grep -q "Is this a project you created or one you trust"; then
+      tmux send-keys -t "$name" Down; sleep 0.5; tmux send-keys -t "$name" Enter
+      log "accepted trust-folder dialog for $name"
     elif echo "$scr" | grep -q "for local development"; then
       tmux send-keys -t "$name" Enter
       log "confirmed dev-channels dialog for $name"
