@@ -22,6 +22,7 @@ GRACE="${WATCHDOG_GRACE:-60}"
 # ЗАПОЛНИ ПОД СЕБЯ: имя tmux-сессии -> папка агента (там, где start.sh)
 declare -A AGENTS=(
   [agent]="/root/ai-victoriarubis"
+  [agent-marketing]="/root/ai-marketing"
 )
 
 # Агент на ДРУГОМ движке (Hermes) — не тмукс-сессия, а systemd-служба, живёт
